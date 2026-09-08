@@ -84,7 +84,14 @@ LPMO using covalent-bond restraints. **Needs a GPU runtime.**
 | Exercise 2 | CPU. Installs `biopython` and `networkx`; downloads MMseqs2 and seqkit binaries. Needs an email address for NCBI Entrez — use your DTU one. |
 | Exercise 3 | **GPU required** — *Runtime → Change runtime type → T4 GPU*. Installs `chai_lab` and `py3Dmol`. Restart the session between parts B, C and D to free RAM. |
 
-Exercise 2 asks you to upload `GH26_characterized.html`. Download it from DTU Learn before you start.
+Exercise 2 pulls `data/GH26_characterized.html` from this repository automatically — there is
+nothing to upload.
+
+## Data
+
+| File | Description |
+|---|---|
+| `data/GH26_characterized.html` | CAZy listing of characterised GH26 entries, used in Exercise 2 to mark which clusters contain a functionally characterised enzyme. |
 
 ---
 
