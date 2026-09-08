@@ -129,5 +129,5 @@ Released on DTU Learn shortly before the session.
 
 ## Acknowledgements
 
-Exercises 2 and 3 were written by **Kristian Barrett**. Chai-1 is from Chai Discovery; MMseqs2 from
+Exercises 2 and 3 were written by **Kristian Frandsen**. Chai-1 is from Chai Discovery; MMseqs2 from
 Steinegger & Söding; the histone annotation in Exercise 1 comes from UniProt.
