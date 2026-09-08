@@ -20,9 +20,17 @@ nothing needs the HPC — click the badges below.
 | Exercise 3 | 11:20 – 11:50 | `notebooks/03_structure_prediction_chai1.ipynb` |
 | Wrap-up | 11:50 – 12:00 | Expectations survey and muddy points |
 
-Each exercise slot is **30 minutes**. Exercises 2 and 3 have individual steps that take longer than
-that, so you are not expected to finish them in the room — get as far as you can and come back to
-them afterwards. The notebooks say where to stop.
+Each exercise slot is **30 minutes**, and Exercises 2 and 3 open with a step that takes longer than
+that on its own. **Start those steps during the lecture before**, not when the slot begins — you will
+be told when in class, and each notebook says at the top exactly which cells to run ahead:
+
+| Before | Run |
+|---|---|
+| Exercise 2 | everything down to and including *Fetch NCBI Sequences in Batches* (~10 min) |
+| Exercise 3 | switch the runtime to **T4 GPU**, then the GPU check and the Chai-1 install (~10 min) |
+
+Leave the tab open while it runs. You are still not expected to finish Exercises 2 and 3 in the room —
+get as far as you can and come back to them; the notebooks say where to stop.
 
 ---
 
