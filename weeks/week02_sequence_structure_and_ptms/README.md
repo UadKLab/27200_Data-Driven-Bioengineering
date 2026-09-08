@@ -2,7 +2,7 @@
 
 **27200 · 10 September 2026 · Thursday, 08:00–12:00**
 
-Two short lectures and three hands-on Colab exercises. Nothing needs to be installed locally and
+Three short lectures and three hands-on Colab exercises. Nothing needs to be installed locally and
 nothing needs the HPC — click the badges below.
 
 | Block | Time | Content |
@@ -11,10 +11,18 @@ nothing needs the HPC — click the badges below.
 | Housekeeping | 08:30 – 08:40 | Groups and hand-in information |
 | Break | 08:40 – 08:50 | ☕ |
 | Lecture 1 | 08:50 – 09:20 | Representations |
-| Exercise 1 | 09:20 – 10:00 | `notebooks/01_representations.ipynb` (break included) |
-| Lecture 2 | 10:00 – 10:45 | Clustering and structure — *Kristian* |
-| Exercises 2–3 | 10:45 – 11:50 | `notebooks/02_gh_sequence_space.ipynb`, `notebooks/03_structure_prediction_chai1.ipynb` |
+| Exercise 1 | 09:20 – 09:50 | `notebooks/01_representations.ipynb` |
+| Break | 09:50 – 10:00 | ☕ |
+| Lecture 2 | 10:00 – 10:20 | Sequence similarity — *Kristian* |
+| Exercise 2 | 10:20 – 10:50 | `notebooks/02_gh_sequence_space.ipynb` |
+| Break | 10:50 – 11:00 | ☕ |
+| Lecture 3 | 11:00 – 11:20 | Protein structure — *Kristian* |
+| Exercise 3 | 11:20 – 11:50 | `notebooks/03_structure_prediction_chai1.ipynb` |
 | Wrap-up | 11:50 – 12:00 | Expectations survey and muddy points |
+
+Each exercise slot is **30 minutes**. Exercises 2 and 3 have individual steps that take longer than
+that, so you are not expected to finish them in the room — get as far as you can and come back to
+them afterwards. The notebooks say where to stop.
 
 ---
 
