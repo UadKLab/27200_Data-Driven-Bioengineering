@@ -38,6 +38,8 @@ get as far as you can and come back to them; the notebooks say where to stop.
 
 - Encode a protein as a **one-hot matrix** and find out what that encoding silently assumes.
 - Use **BLOSUM62 rows** as an encoding and see similarity become part of the representation.
+- Score an alignment the way **BLAST** does — BLOSUM62 column by column, affine gap penalties — and
+  watch the E-value change when only the database changes.
 - Build a **profile HMM** from a real histone H3 family, search with it, and discover that it misses
   a genuine family member because of what you trained it on.
 - Extend an encoding with **PTM channels**, and show that H3K4me3 and H3K9me3 are indistinguishable
@@ -53,21 +55,16 @@ get as far as you can and come back to them; the notebooks say where to stop.
 
 ### Exercise 1 — Representations: from letters to models
 
-One-hot and BLOSUM encodings, a profile HMM built from a live UniProt query, and PTM channels. Runs
-on **free CPU** in about two minutes of compute. There are two versions — take the one that suits you.
-
-**Exercise version** — three `# YOUR CODE HERE` blanks to fill in.
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UadKLab/27200_Data-Driven-Bioengineering/blob/main/weeks/week02_sequence_structure_and_ptms/notebooks/01_representations.ipynb)
 
-**Worked version** — every cell completed, with the outputs already saved, so it reads straight
-through even before you run anything.
+One-hot and BLOSUM encodings, how BLAST turns that same matrix into a score and an E-value, a profile
+HMM built from a live UniProt query, and PTM channels. Runs on **free CPU** in about two minutes of
+compute.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UadKLab/27200_Data-Driven-Bioengineering/blob/main/weeks/week02_sequence_structure_and_ptms/notebooks/01_representations_solved.ipynb)
-
-**If you don't write code, start from the worked version.** Run the cells, read what comes out, and
-spend your time on the questions in the text between them. What is being assessed this week is the
-reasoning, not the syntax — you are not expected to arrive already knowing Python.
+**Every cell is already written, with its output saved**, so the notebook reads straight through
+before you run a thing. Run it, look at what comes out, and spend your time on the questions in the
+text between the cells. The reasoning is what this week is about — you are not expected to arrive
+already knowing Python.
 
 ### Exercise 2 — GH sequence space
 
