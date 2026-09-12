@@ -3,10 +3,9 @@
 **27200 · 17 September 2026 · Thursday, 08:00–12:00**
 
 Alon, *An Introduction to Systems Biology*, chapters 1–4. Two short lectures, two Colab exercises and
-one in Cytoscape. Nothing needs the HPC.
+one in Cytoscape. We will not use the HPC.
 
-> **Install Cytoscape before Thursday.** Exercise 2 ends in Cytoscape and there is no time to
-> download a 200 MB installer in the room. Get 3.10 or later from [cytoscape.org](https://cytoscape.org)
+> **Install Cytoscape before Thursday.** Exercise 2 ends with Cytoscape. Get 3.10 or later from [cytoscape.org](https://cytoscape.org)
 > — free, runs on macOS, Windows and Linux — and open it once to check it starts.
 
 | Block | Time | Content |
@@ -37,13 +36,13 @@ one in Cytoscape. Nothing needs the HPC.
   random: scale-free, clustered, hierarchical.
 - **Reproduce Milo et al. 2002**: count feed-forward loops in the yeast transcription network,
   randomise it fifty times keeping every node's degree, and get Z ≈ 14.
-- Open the same network in **Cytoscape** and make the picture say something.
+- Open the same network in **Cytoscape** and inspect its properties.
 
 ---
 
 ## Open the exercises in Colab
 
-Both notebooks are complete and commented, with every output saved — run them, read the plots, and
+Both notebooks are complete. Run them, read the plots, and
 answer the questions in the text. There is nothing to fill in.
 
 ### Exercise 1 — Gene circuits
@@ -52,7 +51,7 @@ answer the questions in the text. There is nothing to fill in.
 
 Simple regulation, negative and positive autoregulation, the coherent and incoherent feed-forward
 loops, and — if you have time — the repressilator. Every model is a few lines of explicit
-time-stepping you can read. Runs instantly on the free CPU runtime; no installs.
+time-stepping you can read.
 
 ### Exercise 2 — Biological networks
 
