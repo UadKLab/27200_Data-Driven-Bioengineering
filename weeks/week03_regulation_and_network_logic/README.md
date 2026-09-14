@@ -72,6 +72,15 @@ Answers at the bottom for the plenary. Also on DTU Learn as a PDF.
 > If a notebook has trouble loading, *File → Save a copy in Drive*. Restart the runtime after any
 > `pip install` cell.
 
+### Group assignment — optional Python loader
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UadKLab/27200_Data-Driven-Bioengineering/blob/main/weeks/week03_regulation_and_network_logic/loaders/network_loaders.ipynb)
+
+The Week 3 group assignment (brief and `networks.zip` on DTU Learn) is designed to be done in
+Cytoscape. If your group prefers Python, **`loaders/network_loaders.ipynb`** reads the same files
+from the zip into `networkx` — or fetches each network live from its source if you want to change a
+threshold. Nothing in the assignment requires it.
+
 ---
 
 ## Data
