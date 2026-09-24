@@ -4,7 +4,7 @@
 **Instructors:** Mikael & Ajuna
 **Theme:** Inference is bounded by design, variability, and assumptions.
 
-Three exercise notebooks and two notebooks for the group assignment. All run in Colab.
+Four exercise notebooks and two notebooks for the group assignment. All run in Colab.
 
 > **The exercise notebooks are in R.** Colab opens them with an R runtime automatically. The first
 > cell installs the `beeswarm` package, which takes about a minute.
@@ -35,6 +35,16 @@ and R².
 
 **[notebooks/Nonnormal_R.ipynb](notebooks/Nonnormal_R.ipynb)** — skewed data: a log transform with
 a normality check, and the Wilcoxon test as a non-parametric alternative.
+
+### 4 · Experimental design and linear models
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UadKLab/27200_Data-Driven-Bioengineering/blob/main/weeks/week04_experimental_design_and_statistical_inference/notebooks/Exp_design_regression_R.ipynb)
+
+**[notebooks/Exp_design_regression_R.ipynb](notebooks/Exp_design_regression_R.ipynb)** — how sample
+size, noise, covariates and replicate structure change the output of `lm()`. Includes technical
+versus biological replicates, a model with several covariates, and two optional exercises: batch
+correction with ComBat and differential expression with limma. The optional exercises install
+Bioconductor packages, which takes several minutes.
 
 ---
 
