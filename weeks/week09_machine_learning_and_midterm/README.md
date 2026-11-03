@@ -1,7 +1,7 @@
 # Week 9 — Machine Learning & Mid-term Assessment
 
 **Date:** 05 November 2026  
-**Instructors:** Mikael & Valdemaras  
+**Instructors:** Valdemaras  
 **Theme:** Checkpoint after omics block; transition from biological data modalities to modeling.
 
 Two exercises, both in Colab. No GPU needed. Do them in order: the second builds on the first.
