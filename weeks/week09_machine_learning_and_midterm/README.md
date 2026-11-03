@@ -4,11 +4,8 @@
 **Instructors:** Mikael & Valdemaras  
 **Theme:** Checkpoint after omics block; transition from biological data modalities to modeling.
 
-# Week 9 – Exploring and classifying omics data
 
-Exercise notebooks for **27200 Data-driven Bioengineering**. They cover two standard tasks on high-dimensional biological data: dimensionality reduction and supervised classification.
-
-## Notebooks
+## Exercise description
 
 ### `week09_dimensionality_reduction.ipynb` – Tumour types from bulk RNA-seq (TCGA)
 
