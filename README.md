@@ -38,7 +38,7 @@ Use the week README first. It states the preparation, learning aims, practical e
 | 8 | 29 Oct | Metabolomics & Project kick-off | Scott & Pep |
 | 9 | 05 Nov | Machine Learning & Mid-term Assessment | Mikael & Valdemaras |
 | 10 | 12 Nov | Multiomics Integration | Carsten & Kostas |
-| 11 | 19 Nov | Protein Language Models and Generative Protein Design | Tim & Kostas |
+| 11 | 19 Nov | Protein Language Models and Generative Protein Design | Jonathan & Kostas |
 | 12 | 26 Nov | AI, Reproducibility, Data Management and Agentic Workflows | Kostas & Ajuna |
 | 13 | 03 Dec | Graphs, Knowledge Bases and Pathway Analysis | Alberto & Kostas |
 
