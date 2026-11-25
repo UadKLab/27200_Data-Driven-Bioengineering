@@ -47,7 +47,7 @@ Click **[27200_Week12_exercises.zip](27200_Week12_exercises.zip)**, then the dow
    gemini
    ```
 
-   The first time, choose *Use Gemini API key*. Then paste all of `PROMPT.txt`.
+   If it asks how to sign in, choose *Use Gemini API key*. Then paste all of `PROMPT.txt`.
 
 ### Option B: already using Claude Code, Codex or the ChatGPT desktop app?
 

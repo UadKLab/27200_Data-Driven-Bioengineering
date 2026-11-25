@@ -36,7 +36,7 @@ SET-UP  (about five minutes, once)
      Click "Terminal" at the bottom-left of Colab and type, for example:
          cd /content/exercise/3_knowledge_cards
          gemini
-     The first time, choose "Use Gemini API key".
+     If it asks how to sign in, choose "Use Gemini API key".
 
   6. Open PROMPT.txt in that exercise's folder, copy all of it, and paste it into Gemini.
      Each exercise's README.txt tells you what to do next and what to check.
