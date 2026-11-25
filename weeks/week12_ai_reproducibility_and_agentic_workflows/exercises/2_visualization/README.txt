@@ -18,8 +18,8 @@ THE DATA
 STEPS
   1. In a terminal, start your agent in this folder (see START_HERE.txt):
          cd path/to/exercises/2_visualization
-         copilot      (or: agy, claude, codex)
-     In the Codex app: open this folder as your project instead.
+         copilot      (or: agy)
+     In the Codex app or the Claude app (Code tab): open this folder as your project instead.
   2. Paste PART 1 of PROMPT.txt. Read the data profile, then type:  continue
      Do not @-attach umap_spectra_25k.csv: it is far bigger than the context window.
   3. Open explorer.html in your browser (double-click it in this folder). Try it: colour by

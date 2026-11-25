@@ -32,10 +32,9 @@ THE PLAN
       https://antigravity.google
 
   Claude Code (Anthropic)     needs a paid Claude plan
-      macOS/Linux:  curl -fsSL https://claude.ai/install.sh | bash
-      Windows (PowerShell):  irm https://claude.ai/install.ps1 | iex
-                                            then run:  claude
-      https://code.claude.com/docs/en/setup
+      Download the Claude app from the page below, install it, sign in, and open the
+      Code tab. No terminal needed.
+      https://claude.com/download
 
   - The npm commands (Copilot CLI, Codex in the terminal) need Node.js (LTS): https://nodejs.org
   - The agents write and run Python, so you also need Python 3: https://www.python.org/downloads
@@ -52,11 +51,12 @@ THE PLAN
 
 3. START AN EXERCISE
 
-  Codex app: open the exercise folder as your project (choose a folder when you start).
+  Codex app, or the Claude app (Code tab): open the exercise folder as your project
+  (choose a folder when you start).
 
   In a terminal: go into the exercise folder, and start your agent there:
       cd path/to/exercises/3_knowledge_cards
-      copilot      (or: agy, claude, codex)
+      copilot      (or: agy)
 
   Starting it inside the folder matters: the agent can read and write the files in that
   folder, and only those. If it asks whether to trust the folder, say yes.
@@ -77,8 +77,7 @@ GIVING THE AGENT FILES
                     You can also drag a file from your file browser into the terminal.
   Antigravity CLI   Type @ and the path, e.g.  Summarise @sources/SOURCES.md
                     If your version does not complete it, just write the file name.
-  Claude Code       Type @ and the path, e.g.  @PROMPT.txt  (Tab completes the name).
-                    Dragging a file into the terminal pastes its path.
+  Claude app        In the Code tab, type @ and pick the file, e.g.  @PROMPT.txt
 
   Do NOT @-attach the data files (proteinGroups.txt, umap_spectra_25k.csv). They are far
   bigger than the context window. Name them, and let the agent read them with code - that
