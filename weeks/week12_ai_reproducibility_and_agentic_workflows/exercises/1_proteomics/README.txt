@@ -1,4 +1,4 @@
-DIFFERENTIAL PROTEOMICS                                          Second - about 30 min
+DIFFERENTIAL PROTEOMICS                                          Start here - about 30 min
 
 WHAT YOU WILL DO
 Take real output from a published proteomics experiment and use an agent to find the
@@ -26,7 +26,7 @@ STEPS
   3. After step 1 the agent stops. Read what it found. Does the sample mapping look right?
      Then type:  continue
   4. When it finishes, open volcano.png and read RESULTS.md (both in this folder).
-     Keep results.csv: you can rebuild the knowledge base's gene cards from it.
+     Keep results.csv: the knowledge-base exercise (the last one) builds its gene cards from it.
 
 
 YOUR CHECKS  -  answer these yourself before comparing with anyone else

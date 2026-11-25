@@ -1,4 +1,4 @@
-YOUR OWN EXPLORER                                                Third - about 20 min
+YOUR OWN EXPLORER                                                Second - about 20 min
 
 WHAT YOU WILL DO
 Build an interactive tool for a large embedding. Then use a statistic to decide whether a

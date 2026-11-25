@@ -6,9 +6,9 @@ You work on your own computer, with one of four coding agents. Install it before
 
 THE PLAN
   All three are optional: go as far as time allows, in class or at home, in this order.
-  Start here    A small knowledge base     3_knowledge_cards     (about 15 min)
-  Then          Differential proteomics    1_proteomics          (about 30 min)
+  Start here    Differential proteomics    1_proteomics          (about 30 min)
   Then          Your own explorer          2_visualization       (about 20 min)
+  Last          A small knowledge base     3_knowledge_cards     (about 15 min)
 
 
 1. INSTALL ONE AGENT  (before class, about ten minutes)
@@ -55,7 +55,7 @@ THE PLAN
   (choose a folder when you start).
 
   In a terminal: go into the exercise folder, and start your agent there:
-      cd path/to/exercises/3_knowledge_cards
+      cd path/to/exercises/1_proteomics
       copilot      (or: agy)
 
   Starting it inside the folder matters: the agent can read and write the files in that

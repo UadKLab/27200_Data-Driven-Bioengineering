@@ -1,4 +1,4 @@
-A SMALL KNOWLEDGE BASE                                          Start here - about 15 min
+A SMALL KNOWLEDGE BASE                                          Last - about 15 min
 
 WHAT YOU WILL DO
 Turn two papers and a table of proteomics results into a set of linked study cards: a small
@@ -28,10 +28,9 @@ THE PAPERS
 
 
 BEFORE YOU START
-  The agent needs a table of differential proteomics results. This is the first exercise, so
-  it uses results_reference.csv in this folder: our analysis of the same experiment. If you
-  have already done the proteomics exercise, it uses your ../1_proteomics/results.csv.
-  After the proteomics exercise, you can rebuild the gene cards from your own results.
+  The agent needs a table of differential proteomics results. It uses your own
+  ../1_proteomics/results.csv from the first exercise. If that file is missing, it uses
+  results_reference.csv in this folder: our analysis of the same experiment.
 
 
 STEPS

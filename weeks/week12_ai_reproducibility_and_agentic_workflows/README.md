@@ -20,9 +20,9 @@ as time allows, in class or at home, in this order.
 
 | Order | Exercise | Folder | Time |
 |---|---|---|---|
-| Start here | A small knowledge base | [exercises/3_knowledge_cards](exercises/3_knowledge_cards) | ~15 min |
-| Then | Differential proteomics | [exercises/1_proteomics](exercises/1_proteomics) | ~30 min |
+| Start here | Differential proteomics | [exercises/1_proteomics](exercises/1_proteomics) | ~30 min |
 | Then | Your own explorer | [exercises/2_visualization](exercises/2_visualization) | ~20 min |
+| Last | A small knowledge base, built from your proteomics results | [exercises/3_knowledge_cards](exercises/3_knowledge_cards) | ~15 min |
 
 The full instructions are in [exercises/START_HERE.txt](exercises/START_HERE.txt). Each folder has a
 `README.txt` with what to do and what to check, and a `PROMPT.txt` for the agent.
@@ -58,7 +58,7 @@ Click **[27200_Week12_exercises.zip](27200_Week12_exercises.zip)**, then the dow
 **In a terminal:** go into an exercise folder and start your agent there:
 
 ```bash
-cd path/to/exercises/3_knowledge_cards
+cd path/to/exercises/1_proteomics
 copilot      # or: agy
 ```
 
