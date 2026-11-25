@@ -25,7 +25,8 @@ STEPS
      Do not @-attach proteinGroups.txt: it is far bigger than the context window.
   3. After step 1 the agent stops. Read what it found. Does the sample mapping look right?
      Then type:  continue
-  4. When it finishes, open volcano.png and read RESULTS.md (both in this folder).
+  4. When it finishes, open volcano.png, enrichment_up.png and enrichment_down.png, and read
+     RESULTS.md (all in this folder).
      Keep results.csv: the knowledge-base exercise (the last one) builds its gene cards from it.
 
 
@@ -36,9 +37,12 @@ YOUR CHECKS  -  answer these yourself before comparing with anyone else
      pipeline broken? How would you tell the difference?
   3. In the shuffled data, how many proteins passed FDR? What should that number be?
   4. Did the agent notice how the samples were processed? Did it do anything about it?
-  5. The paper reports 132 proteins that changed. How many did you find? Give two reasons
+  5. The volcano colours use uncorrected p. How many proteins would pass p < 0.05 by chance?
+     Do the up and down enrichments make sense for cells in low oxygen (think glycolysis,
+     HIF targets)? Would you still believe them after correction?
+  6. The paper reports 132 proteins that changed. How many did you find? Give two reasons
      why the numbers could differ.
-  6. Could you re-run analysis.py without the agent? Try it in a new terminal, in this folder:
+  7. Could you re-run analysis.py without the agent? Try it in a new terminal, in this folder:
          python3 analysis.py      (on Windows: python analysis.py)
 
 

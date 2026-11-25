@@ -44,19 +44,34 @@ the remaining steps without stopping, and show me the result of each step as you
    proteins were tested, how many pass FDR < 0.05, and how many also pass |log2FC| > 1.
 
 6. VOLCANO PLOT
-   Plot log2 fold change against -log10 p. Colour significant proteins by direction and the
-   rest grey. Label the most extreme genes. Write the direction of the comparison on the
-   axis so nobody can misread the sign. Save it as volcano.png.
+   Plot log2 fold change against -log10 of the UNCORRECTED p-value. Colour the proteins with
+   p < 0.05 and log2FC > 1 in one colour (up), those with p < 0.05 and log2FC < -1 in another
+   (down), and the rest grey. Say in the legend that the colours use uncorrected p, and how
+   many proteins are in each group. Label the most extreme genes. Write the direction of the
+   comparison on the axis so nobody can misread the sign. Save it as volcano.png.
+   Save the two groups as up_proteins.csv and down_proteins.csv.
 
-7. CHECK YOURSELF
+7. ENRICHMENT - UP AND DOWN SEPARATELY
+   Run a gene set enrichment (over-representation) analysis for the up group and, separately,
+   for the down group. Use g:Profiler (the gprofiler-official Python package) for human,
+   with GO Biological Process, KEGG and Reactome, and use all tested proteins as the
+   background, not the whole genome. Save the tables as enrichment_up.csv and
+   enrichment_down.csv, and a plot of the top 10 terms for each as enrichment_up.png and
+   enrichment_down.png. If there is no internet connection, tell me and stop this step.
+
+8. CHECK YOURSELF
    - Print the top 15 up and top 15 down, with gene name, log2FC, p and q.
    - Compare the direction of the top hits with what is known about this condition. Tell me
      honestly whether it looks plausible.
    - Shuffle the condition labels, re-run steps 3 to 5, and report how many proteins pass
      FDR in the shuffled data. If that is not close to zero, something is wrong - tell me.
    - Restate n at every stage: loaded -> filtered -> tested -> significant.
+   - The groups in step 6 use uncorrected p. How many proteins would pass p < 0.05 by chance
+     alone, given how many you tested? Compare that with the size of your groups, and say
+     what it means for how much to trust the enrichment.
 
-Finally, save one script, analysis.py, that reproduces everything from the raw file; the
-full results table as results.csv, one row per tested protein, with the columns gene,
-log2FC, p and q (the knowledge-base exercise uses it); and a short RESULTS.md saying what you did, what you
-chose and why, and what you are unsure about. Use a fixed random seed.
+Finally, save one script, analysis.py, that reproduces everything from the raw file,
+including all plots and the enrichment; the full results table as results.csv, one row per
+tested protein, with the columns gene, log2FC, p and q (the knowledge-base exercise uses
+it); and a short RESULTS.md saying what you did, what you chose and why, which pathways
+came up in each direction, and what you are unsure about. Use a fixed random seed.
