@@ -1,0 +1,73 @@
+We are going to build a small knowledge base in the folder hypoxia_kb/. Read
+hypoxia_kb/README.md first: it describes the folder, the card format and the rules. Follow
+it exactly.
+
+The papers are in hypoxia_kb/sources/:
+  Hofner2025_KGN_hypoxia.md   - a proteomics study of human granulosa cells (KGN) in low oxygen
+  Luo2022_hypoxia_review.md   - a review of hypoxia signalling
+Read them with tools. Do not print them in full.
+
+My differential proteomics results are in ../1_proteomics/results.csv. If that file does not
+exist, use results_reference.csv in this folder instead (an analysis of the same experiment).
+Copy the file you use to hypoxia_kb/my_results.csv, and tell me which one you used.
+
+Keep a file called NOTES.md in this folder (not inside hypoxia_kb/) and update it after
+every step with the current state and the next step.
+
+
+1. PROPOSE - then stop
+   Propose 5 concept cards: processes, mechanisms or methods that both papers help to
+   explain (for example, how cells sense oxygen).
+   Propose 6 gene cards, chosen from MY significant proteins in my_results.csv
+   (q < 0.05 and |log2FC| > 1):
+     - 4 that the papers discuss: the two most up and the two most down among those the
+       papers mention. If fewer than two went down, say so and take more from the up side.
+     - 2 that neither paper mentions.
+   To decide whether a paper mentions a gene, search the papers for its symbol AND for the
+   protein's other common names. Show me what you searched for and how many hits you got.
+   Show me both lists, and wait until I type "continue".
+
+2. WRITE
+   One file per card: concepts in hypoxia_kb/concepts/, genes in hypoxia_kb/genes/. The
+   file name is the card name. Gene cards are named by the gene symbol exactly as it
+   appears in my_results.csv.
+
+   Use exactly the format in hypoxia_kb/README.md. In particular:
+   - Under "What the papers say", every claim is one bullet ending in its source and
+     section, for example (Hofner2025, Results). On the next line, indented, quote the
+     exact sentence from the paper that supports it:
+         - NDRG1 is more abundant in KGN cells in hypoxia. (Hofner2025, Results)
+           > "The more abundantly expressed proteins included AK4 ..., and NDRG1 ..."
+     Copy the sentence from the paper - do not retype or paraphrase it. You may leave words
+     out with "...". Quotes must be at least 6 words long.
+   - Anything from your general knowledge, not from these papers, ends in
+     (not from these sources) and has no quote.
+   - Gene cards: put my log2FC and q in the front matter as my_log2FC and my_q, copied from
+     my_results.csv. Under "My result", say in words what I found. Under "Do my result and
+     the papers agree?", say agree, disagree or not reported, and why the results could
+     differ.
+   - For the 2 genes the papers do not mention: do not make up claims to fill the card.
+     Under "What the papers say", write one bullet saying neither paper mentions it, marked
+     (not from these sources). The definition can come from general knowledge, marked the
+     same way.
+   - Write about the concept or gene, not about the paper.
+   - Link each card to at least two others with [[exact card name]], each with a few words
+     saying why.
+
+3. INDEX
+   Write hypoxia_kb/INDEX.md: every card as a [[link]], grouped by type, one line each.
+
+4. CHECK - run the script, fix, run again
+   Run:   python hypoxia_kb/tools/check_kb.py
+   It writes hypoxia_kb/CHECK_REPORT.md. Fix every ERROR:
+   - a quote that is not found: find the real sentence in the paper and use it. If no
+     sentence supports the claim, delete the claim.
+   - record every claim you deleted or changed in hypoxia_kb/CHANGELOG.md, with the reason.
+   Do not change the script, and do not remove a claim just to make a warning go away.
+   Run the check again. Stop after three rounds even if errors remain.
+
+5. REPORT
+   Tell me: how many quotes the script found word for word in the first round and in the
+   last round, what you had to change or delete, and any warnings that remain. Then run
+       python make_zip.py
+   and tell me the file it made.

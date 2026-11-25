@@ -1,0 +1,96 @@
+WEEK 12 EXERCISES - AI IN BIOLOGY AND AGENTIC WORKFLOWS
+27200 Data-driven Bioengineering
+
+You need a Google account and a web browser. Nothing to install. Nothing to pay.
+
+
+THE PLAN
+  All three are optional: go as far as time allows, in class or at home, in this order.
+  Start here    A small knowledge base     3_knowledge_cards     (about 45 min)
+  Then          Differential proteomics    1_proteomics          (about 2 hours)
+  Then          Your own explorer          2_visualization       (about 1 h 15)
+
+
+SET-UP  (about five minutes, once)
+
+  1. Get a free API key
+     Go to  aistudio.google.com/apikey , sign in with Google, click "Create API key",
+     and copy the key.
+
+  2. Open the set-up notebook in Colab
+     Go to  colab.research.google.com , choose File > Upload notebook, and pick
+     exercise_setup.ipynb from this folder.
+     (Keep the zip you downloaded from DTU Learn - you will upload it in step 4.)
+
+  3. Store your key in Colab
+     Click the key icon in the left sidebar, then "Add new secret".
+       Name:   GEMINI_API_KEY
+       Value:  paste your key
+     Switch on "Notebook access".
+
+  4. Run the notebook's cells from top to bottom
+     When it asks, upload the zip you downloaded from DTU Learn - the same file, not
+     unzipped. It then prepares everything. Wait until you see:   Ready.
+
+  5. Open the terminal and start an exercise
+     Click "Terminal" at the bottom-left of Colab and type, for example:
+         cd /content/exercise/3_knowledge_cards
+         gemini
+     The first time, choose "Use Gemini API key".
+
+  6. Open PROMPT.txt in that exercise's folder, copy all of it, and paste it into Gemini.
+     Each exercise's README.txt tells you what to do next and what to check.
+
+
+YOUR QUOTA
+  The free key gives a limited number of requests a day, and each exercise needs quite a
+  few of them.
+  - Read what the agent prints before you ask again.
+  - Type /stats in Gemini to see how much you have used.
+  - If you see a rate-limit message, wait a minute and continue.
+
+
+ALREADY USING CLAUDE CODE, CODEX OR THE CHATGPT DESKTOP APP?
+  Then you can skip Colab and the API key, and work on your own computer:
+  1. Download the exercises: the zip from DTU Learn (Week 12), or from the course GitHub,
+     weeks/week12_ai_reproducibility_and_agentic_workflows, click 27200_Week12_exercises.zip
+     and then the download button (Download raw file).
+  2. Unzip it.
+  3. Open the exercise folder in your agent, for example in a terminal:
+         cd exercises/3_knowledge_cards
+         claude          (Claude Code)
+         codex           (Codex)
+     In a desktop app, choose that folder as the project or working folder.
+  4. Paste PROMPT.txt, as above. The prompts are written for Gemini CLI but work in any agent.
+
+  To install one (these need an account, usually a paid plan):
+    Claude Code   macOS/Linux:   curl -fsSL https://claude.ai/install.sh | bash
+                  Windows:       irm https://claude.ai/install.ps1 | iex    (in PowerShell)
+                  or the Claude desktop app, Code tab: claude.com/download
+    Codex         npm install -g @openai/codex     (or the Codex app: developers.openai.com/codex)
+  Sign in with your Claude or ChatGPT account the first time you start it.
+
+
+IF SOMETHING DOES NOT WORK
+  - No Terminal button?  Use the notebook's "No Terminal?" cell. It runs the agent there.
+  - Out of quota, or Gemini will not start?  Use any free chat assistant (Gemini, Claude,
+    ChatGPT). Upload the data file and paste PROMPT_chat.txt instead of PROMPT.txt.
+    Never paste the data itself into a chat.
+  - Ask us. We would rather help you in the first ten minutes than find you stuck at the end.
+
+
+KEEP YOUR WORK
+  Colab deletes everything when you close the session. The last cell of the notebook,
+  "Download your work", zips a folder and downloads it. The knowledge-base exercise makes a knowledge base
+  you can keep: hypoxia_kb.zip.
+
+
+KEEP NOTES
+  Every prompt asks the agent to keep a NOTES.md as it works. If a session stops, start a
+  new one and type:
+      Read NOTES.md and continue from the next step.
+
+
+ABOUT THE DATA
+  Everything here is public (each README says where it comes from). That is why a free tier
+  is fine today. Do not use free tiers like this for confidential or unpublished data.

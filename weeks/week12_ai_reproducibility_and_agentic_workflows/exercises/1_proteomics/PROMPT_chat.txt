@@ -1,0 +1,30 @@
+Use this instead of PROMPT.txt if you are working in a chat assistant (Gemini, Claude,
+ChatGPT). First upload proteinGroups.txt and sample_metadata.csv. Then paste everything
+below this line.
+-------------------------------------------------------------------------------------------
+
+I have uploaded two files: proteinGroups.txt (MaxQuant output from a published proteomics
+experiment) and sample_metadata.csv (which sample is which). Read them with code. Do not
+paste their contents back to me.
+
+Goal: find the proteins that differ between the two conditions, with a volcano plot.
+
+Do all of the following in one go, with a short result for each step:
+
+1. The number of protein groups and samples, the quantitative columns, and how the samples
+   map to conditions.
+2. Remove reverse hits, contaminants and proteins only identified by site. Say how many
+   each filter removed. Treat 0 as missing.
+3. Test normality with Shapiro-Wilk before and after log2 transformation, and report the
+   share of proteins that pass each time. Median-normalise the samples.
+4. Check the metadata for anything that makes the samples not independent, and tell me.
+5. Run a t-test (say whether Student's or Welch's, and why), then Benjamini-Hochberg.
+   Report how many were tested, how many pass FDR < 0.05, and how many also pass
+   |log2FC| > 1.
+6. Make a volcano plot with the direction of the comparison on the axis.
+7. List the top 15 up and top 15 down. Then shuffle the labels, re-run, and report how many
+   proteins pass FDR in the shuffled data.
+
+Finally, give me the complete code as one Python script, so I can run it myself in Colab.
+The script must save the full results table as results.csv, one row per tested protein,
+with the columns gene, log2FC, p and q.

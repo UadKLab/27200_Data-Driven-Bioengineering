@@ -1,0 +1,13 @@
+sample_id,lfq_column,condition,replicate,batch,oxygen_percent,duration_days,cell_line
+Ref7921_01,LFQ intensity Ref7921_01,normoxia,1,Ref7921,21.0,10,KGN
+Ref7921_02,LFQ intensity Ref7921_02,normoxia,2,Ref7921,21.0,10,KGN
+Ref7921_03,LFQ intensity Ref7921_03,normoxia,3,Ref7921,21.0,10,KGN
+Ref7921_04,LFQ intensity Ref7921_04,hypoxia,4,Ref7921,1.0,10,KGN
+Ref7921_05,LFQ intensity Ref7921_05,hypoxia,5,Ref7921,1.0,10,KGN
+Ref7921_06,LFQ intensity Ref7921_06,hypoxia,6,Ref7921,1.0,10,KGN
+Ref8473_01,LFQ intensity Ref8473_01,normoxia,1,Ref8473,21.0,10,KGN
+Ref8473_02,LFQ intensity Ref8473_02,normoxia,2,Ref8473,21.0,10,KGN
+Ref8473_03,LFQ intensity Ref8473_03,normoxia,3,Ref8473,21.0,10,KGN
+Ref8473_04,LFQ intensity Ref8473_04,hypoxia,4,Ref8473,1.0,10,KGN
+Ref8473_05,LFQ intensity Ref8473_05,hypoxia,5,Ref8473,1.0,10,KGN
+Ref8473_06,LFQ intensity Ref8473_06,hypoxia,6,Ref8473,1.0,10,KGN

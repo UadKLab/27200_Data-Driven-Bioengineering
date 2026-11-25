@@ -1,0 +1,27 @@
+Only if you finish early. Use this in the same Gemini session, or in a new one started in
+this folder.
+-------------------------------------------------------------------------------------------
+
+A new paper has come out: new_paper/Nishigaki2025_HIF1a_NDRG1.md. The KGN study in our
+knowledge base cites it. Add it to the knowledge base in hypoxia_kb/, following the rules
+in hypoxia_kb/README.md.
+
+1. Copy it to hypoxia_kb/sources/, and add its citation to hypoxia_kb/sources/SOURCES.md
+   (the citation is at the top of the paper). Its short name is Nishigaki2025.
+
+2. Read it with tools - do not print it in full. Then tell me, before changing anything:
+   - which existing cards it adds to, and what it adds to each;
+   - where it agrees with, extends, or conflicts with what the cards already say;
+   - whether it needs any new card. At most two, and only for things no existing card
+     covers. Search the cards first.
+   Wait until I type "continue".
+
+3. Update the cards. Add new claims with quotes, in the same format. Add Nishigaki2025 to
+   each card's sources. Where the papers disagree, or where the experiments are not
+   comparable, say so under Open questions. Do not delete or rewrite claims that are
+   still correct.
+
+4. Record every change in hypoxia_kb/CHANGELOG.md: the date, the card, what changed, why.
+
+5. Run   python hypoxia_kb/tools/check_kb.py   and fix every error. Then run
+   python make_zip.py   and tell me what changed, in five lines or fewer.

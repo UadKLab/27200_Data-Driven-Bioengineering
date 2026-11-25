@@ -1,0 +1,66 @@
+Run PART 1 first and look at what it produces. Only then run PART 2.
+
+
+==========================================================================================
+PART 1
+==========================================================================================
+
+umap_spectra_25k.csv holds 25,000 mass spectra: 2-D UMAP coordinates (umap_x, umap_y), a
+separate 3-D fit (umap3d_1, umap3d_2, umap3d_3), and metadata for each spectrum. The file is
+large: read it with code and do not print it.
+
+Keep a file called NOTES.md and update it as you work.
+
+First, profile the data. Tell me: the number of rows and columns; which columns are
+categorical and which are continuous; how many categories each categorical column has; the
+number of missing values in each column; and anything that looks like a data-quality
+problem. Then stop and wait until I type "continue".
+
+Then build explorer.html: a single self-contained file that opens in a browser with no
+internet connection and no server. It must let me:
+  - see all 25,000 points (use WebGL, for example Plotly scattergl);
+  - colour the points by any column, chosen from a menu;
+  - highlight chosen categories in colour while everything else stays grey at the same
+    size - and reset back;
+  - select a region (box or lasso) and see, for each categorical column, the share of each
+    category inside the region and how enriched it is compared with the whole dataset;
+  - hover over a point to see its metadata;
+  - save the current view as a PNG.
+
+Design rules: colour-blind-safe colours; no more than about three hues against grey at
+once; no rainbow colour scales; no explanatory text on the page.
+
+You cannot open a browser, so check the file another way: confirm it contains all 25,000
+points and that its embedded data is valid. Then tell me exactly what I should check by eye.
+Save the code as make_explorer.py.
+
+
+==========================================================================================
+PART 2  -  run this only after you have opened explorer.html and looked at it
+==========================================================================================
+
+Looking at the map, the spectra seem to cluster by organism. I do not believe it.
+
+Each organism was probably measured in a single project, on one instrument, with one
+method. So "clusters by organism" and "clusters by project" look the same in the picture,
+and enrichment numbers cannot tell them apart.
+
+Give me a test that can. The question is: does a label L still predict which spectra are
+neighbours once a covariate C is held fixed?
+
+  - Build a k-nearest-neighbour graph (k = 15) on umap_x and umap_y.
+  - For a pair (L, C): among neighbour pairs that share the same C, how often do they also
+    share the same L?
+  - Compare that with a null in which L is shuffled within each C group.
+  - Only use C groups that contain at least two L categories. Report how many groups
+    qualify and what share of neighbour pairs they cover. If very few qualify, say that the
+    test is weak.
+  - Also report the reverse: how often neighbours share C when they share L.
+  - Run a permutation test (shuffle L within C groups, 100 times) and give a z-score.
+
+Run it for organism within project, instrument within project, and fragmentation within
+project. Tell me in plain words which apparent clusters survive and which are covariates.
+If L is completely determined by C, say the comparison is impossible instead of giving a
+number.
+
+Save the results as covariates.md and the code as covariates.py.

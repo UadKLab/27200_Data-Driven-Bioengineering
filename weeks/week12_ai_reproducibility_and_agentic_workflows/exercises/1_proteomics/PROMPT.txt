@@ -1,0 +1,59 @@
+In this folder there is a MaxQuant proteinGroups.txt from a published experiment and a
+sample_metadata.csv describing the samples. Read both before you plan anything. Do not
+print whole files - they are very large. Look at the column names and the first rows.
+
+Goal: find the proteins that differ between the two conditions, and make a volcano plot
+I would be willing to put in a figure.
+
+Keep a file called NOTES.md and update it after every step with: the goal, the decisions
+made and why, constraints to remember, the current state, what did not work, and the next
+step.
+
+Work through the steps below. After step 1, stop and wait until I type "continue". Then do
+the remaining steps without stopping, and show me the result of each step as you go.
+
+1. ORIENT
+   How many protein groups and samples are there? Which columns hold the quantities? How do
+   the samples map to conditions? Tell me if anything in the metadata does not match the
+   data.
+
+2. FILTER
+   Remove reverse hits, potential contaminants, and proteins only identified by site. Say
+   how many rows each filter removed. MaxQuant writes missing values as 0: treat them as
+   missing, not as zero abundance, and say how many there are.
+
+3. CHECK THE ASSUMPTIONS - DO NOT ASSUME THEM
+   Test whether the intensities are normally distributed: Shapiro-Wilk per protein, plus a
+   histogram and a QQ plot for a few proteins. If they are not normal, log2-transform them
+   and test again. Show the evidence before and after, not just a statement.
+   Decide whether the samples need normalising against each other, say why, and show the
+   sample distributions before and after.
+
+4. DECIDE THE TEST
+   There are two conditions, so use a t-test. Check whether the variances are similar
+   (Levene) and choose Student's or Welch's accordingly.
+   Look carefully at the metadata: is anything making the samples not independent? If so,
+   tell me what it is and what it means for the analysis.
+   Choose a minimum number of valid values per group, and say why.
+
+5. TEST AND CORRECT
+   Run the test and correct for multiple testing with Benjamini-Hochberg. Report how many
+   proteins were tested, how many pass FDR < 0.05, and how many also pass |log2FC| > 1.
+
+6. VOLCANO PLOT
+   Plot log2 fold change against -log10 p. Colour significant proteins by direction and the
+   rest grey. Label the most extreme genes. Write the direction of the comparison on the
+   axis so nobody can misread the sign. Save it as volcano.png.
+
+7. CHECK YOURSELF
+   - Print the top 15 up and top 15 down, with gene name, log2FC, p and q.
+   - Compare the direction of the top hits with what is known about this condition. Tell me
+     honestly whether it looks plausible.
+   - Shuffle the condition labels, re-run steps 3 to 5, and report how many proteins pass
+     FDR in the shuffled data. If that is not close to zero, something is wrong - tell me.
+   - Restate n at every stage: loaded -> filtered -> tested -> significant.
+
+Finally, save one script, analysis.py, that reproduces everything from the raw file; the
+full results table as results.csv, one row per tested protein, with the columns gene,
+log2FC, p and q (the knowledge-base exercise uses it); and a short RESULTS.md saying what you did, what you
+chose and why, and what you are unsure about. Use a fixed random seed.

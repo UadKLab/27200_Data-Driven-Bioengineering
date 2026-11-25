@@ -1,0 +1,26 @@
+Use this instead of PROMPT.txt if you are working in a chat assistant (Gemini, Claude,
+ChatGPT). First upload umap_spectra_25k.csv. Then paste everything below this line.
+You will run the scripts it gives you in a Colab cell.
+-------------------------------------------------------------------------------------------
+
+I have uploaded umap_spectra_25k.csv: 25,000 mass spectra with 2-D UMAP coordinates
+(umap_x, umap_y) and metadata for each spectrum. Read it with code. Do not paste it back.
+
+1. Profile it: rows and columns, categorical and continuous columns, the number of
+   categories per column, missing values, and any data-quality problems.
+
+2. Write a Python script, make_explorer.py, that I will run in Google Colab. It should read
+   the CSV and write explorer.html: one self-contained file (no internet needed) where I
+   can see all points (Plotly scattergl); colour by any column from a menu; highlight
+   chosen categories against grey; select a region and see each category's share and
+   enrichment inside it; hover for metadata; and save the view as PNG. Colour-blind-safe
+   colours, at most three hues against grey, no rainbow scales.
+
+3. Write a second script, covariates.py. It tests whether a label L predicts nearest
+   neighbours once a covariate C is held fixed: a k-nearest-neighbour graph (k = 15) on
+   umap_x and umap_y; how often neighbour pairs that share C also share L; a null made by
+   shuffling L within C groups; only C groups with at least two L categories; 100
+   permutations and a z-score; and the reverse direction. Run it for organism, instrument
+   and fragmentation, each within project, and print a table.
+
+Give me both scripts in full.
