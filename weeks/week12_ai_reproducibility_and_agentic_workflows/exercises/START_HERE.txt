@@ -15,9 +15,10 @@ THE PLAN
 
   You need one of these. Pick the one you have an account for.
 
-  Codex CLI (OpenAI)          free with a ChatGPT account, small limits
-      npm install -g @openai/codex          then run:  codex
+  Codex app (OpenAI)          free with a ChatGPT account, small limits
+      Download the app from the page below and install it. No terminal needed.
       https://developers.openai.com/codex/quickstart
+      (Prefer the terminal? npm install -g @openai/codex   then run:  codex)
 
   GitHub Copilot CLI          free with a GitHub account, small limits (more on the
                               student plan)
@@ -36,7 +37,7 @@ THE PLAN
                                             then run:  claude
       https://code.claude.com/docs/en/setup
 
-  - The npm commands need Node.js (the LTS version): https://nodejs.org
+  - The npm commands (Copilot CLI, Codex in the terminal) need Node.js (LTS): https://nodejs.org
   - The agents write and run Python, so you also need Python 3: https://www.python.org/downloads
     Check with:  python3 --version   (on Windows:  python --version)
   - The first time you start the agent, it asks you to sign in. Use the account above.
@@ -51,9 +52,11 @@ THE PLAN
 
 3. START AN EXERCISE
 
-  Open a terminal, go into the exercise folder, and start your agent there:
+  Codex app: open the exercise folder as your project (choose a folder when you start).
+
+  In a terminal: go into the exercise folder, and start your agent there:
       cd path/to/exercises/3_knowledge_cards
-      codex        (or: copilot, agy, claude)
+      copilot      (or: agy, claude, codex)
 
   Starting it inside the folder matters: the agent can read and write the files in that
   folder, and only those. If it asks whether to trust the folder, say yes.
@@ -69,8 +72,7 @@ GIVING THE AGENT FILES
   The agent already sees every file in the folder you started it in. To point it at one
   file in your message, type @ followed by the file name:
 
-  Codex CLI         Type @ and start typing the name: a file search opens; pick the file.
-                    For an image:  codex -i volcano.png "What does this plot show?"
+  Codex app         Type @ and pick the file, or drag the file into the message box.
   Copilot CLI       Type @ and the path, e.g.  Explain @README.txt
                     You can also drag a file from your file browser into the terminal.
   Antigravity CLI   Type @ and the path, e.g.  Summarise @sources/SOURCES.md

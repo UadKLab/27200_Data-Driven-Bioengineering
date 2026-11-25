@@ -33,14 +33,14 @@ Pick the one you have an account for.
 
 | Agent | Account | Install | Start |
 |---|---|---|---|
-| [Codex CLI](https://developers.openai.com/codex/quickstart) (OpenAI) | ChatGPT, free plan included | `npm install -g @openai/codex` | `codex` |
+| [Codex app](https://developers.openai.com/codex/quickstart) (OpenAI) | ChatGPT, free plan included | download the app from the page; no terminal needed (or `npm install -g @openai/codex` for the CLI) | open the app |
 | [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) | GitHub, free plan included; more on the student plan | `npm install -g @github/copilot` | `copilot` |
 | [Antigravity CLI](https://antigravity.google) (Google) | personal Google account, free tier | macOS/Linux: `curl -fsSL https://antigravity.google/cli/install.sh \| bash` · Windows (PowerShell): `irm https://antigravity.google/cli/install.ps1 \| iex` | `agy` |
 | [Claude Code](https://code.claude.com/docs/en/setup) (Anthropic) | paid Claude plan | macOS/Linux: `curl -fsSL https://claude.ai/install.sh \| bash` · Windows (PowerShell): `irm https://claude.ai/install.ps1 \| iex` | `claude` |
 
 You also need:
 
-- [Node.js](https://nodejs.org) (the LTS version) for the `npm` commands
+- [Node.js](https://nodejs.org) (the LTS version) for the `npm` commands (Copilot CLI, or Codex in the terminal)
 - [Python 3](https://www.python.org/downloads/), because the agents write and run Python
 
 Sign in with your account the first time you start the agent. The free tiers are small: read what
@@ -53,11 +53,13 @@ Click **[27200_Week12_exercises.zip](27200_Week12_exercises.zip)**, then the dow
 
 ### 3. Start an exercise
 
-Open a terminal, go into an exercise folder and start your agent there:
+**Codex app:** open the exercise folder as your project (choose a folder when you start).
+
+**In a terminal:** go into an exercise folder and start your agent there:
 
 ```bash
 cd path/to/exercises/3_knowledge_cards
-codex      # or: copilot, agy, claude
+copilot      # or: agy, claude, codex
 ```
 
 The agent can read and write the files in that folder. Then type *Read PROMPT.txt and follow it*,
@@ -70,7 +72,7 @@ message, type `@` and the file name:
 
 | Agent | How |
 |---|---|
-| Codex CLI | Type `@` and a file search opens. For an image: `codex -i volcano.png "What does this plot show?"` |
+| Codex app | Type `@` and pick the file, or drag the file into the message box |
 | Copilot CLI | `Explain @README.txt`, or drag a file from your file browser into the terminal |
 | Antigravity CLI | `Summarise @sources/SOURCES.md`; if your version does not complete it, just write the file name |
 | Claude Code | `@PROMPT.txt` (Tab completes the name); dragging a file into the terminal pastes its path |

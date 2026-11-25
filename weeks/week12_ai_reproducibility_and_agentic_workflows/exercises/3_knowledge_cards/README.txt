@@ -37,7 +37,8 @@ BEFORE YOU START
 STEPS
   1. In a terminal, start your agent in this folder (see START_HERE.txt):
          cd path/to/exercises/3_knowledge_cards
-         codex        (or: copilot, agy, claude)
+         copilot      (or: agy, claude, codex)
+     In the Codex app: open this folder as your project instead.
   2. Type:  Read PROMPT.txt and follow it.   (or paste the whole of PROMPT.txt)
   3. The agent proposes 5 concept cards and 6 gene cards, and stops. Look at the gene list:
      are these really among your significant proteins? Then type:
