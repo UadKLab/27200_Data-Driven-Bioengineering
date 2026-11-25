@@ -1,11 +1,11 @@
-"""Pack the knowledge base into hypoxia_kb.zip, ready to download.
+"""Check the knowledge base and pack it into hypoxia_kb.zip.
 
     python make_zip.py                          check hypoxia_kb/, then zip it
     python make_zip.py --from-chat cards.txt    first unpack cards a chat assistant wrote
 
 --from-chat reads a text file in which each card starts with a line like
     === FILE: genes/NDRG1.md ===
-and writes each card into hypoxia_kb/. That is the format PROMPT_chat.txt asks for.
+and writes each card into hypoxia_kb/. (Optional: for cards written outside an agent.)
 """
 import re
 import shutil
@@ -75,7 +75,7 @@ def main():
                 continue
             z.write(p, Path(KB.name) / p.relative_to(KB))
     print(f"\nWrote {OUT.name} ({OUT.stat().st_size / 1e6:.1f} MB).")
-    print("Download it: Files panel on the left > right-click hypoxia_kb.zip > Download.")
+    print("hypoxia_kb.zip is in this folder: a copy of the knowledge base to share or archive.")
     print("Unzip it, then open the hypoxia_kb folder in Obsidian (Open folder as vault).")
 
 

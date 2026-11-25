@@ -5,6 +5,9 @@ print whole files - they are very large. Look at the column names and the first 
 Goal: find the proteins that differ between the two conditions, and make a volcano plot
 I would be willing to put in a figure.
 
+If you need Python packages, create a virtual environment in this folder first
+(python3 -m venv .venv) and install them there. Do not install anything system-wide.
+
 Keep a file called NOTES.md and update it after every step with: the goal, the decisions
 made and why, constraints to remember, the current state, what did not work, and the next
 step.

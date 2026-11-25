@@ -1,4 +1,4 @@
-YOUR OWN EXPLORER                                                Third - about 1 h 15
+YOUR OWN EXPLORER                                                Third - about 20 min
 
 WHAT YOU WILL DO
 Build an interactive tool for a large embedding. Then use a statistic to decide whether a
@@ -16,12 +16,13 @@ THE DATA
 
 
 STEPS
-  1. In the Colab terminal:
-         cd /content/exercise/2_visualization
-         gemini
+  1. In a terminal, start your agent in this folder (see START_HERE.txt):
+         cd path/to/exercises/2_visualization
+         codex        (or: copilot, agy, claude)
   2. Paste PART 1 of PROMPT.txt. Read the data profile, then type:  continue
-  3. Download explorer.html (Files panel > right-click > Download) and open it in your
-     own browser. Try it: colour by instrument, then by organism. Select a region.
+     Do not @-attach umap_spectra_25k.csv: it is far bigger than the context window.
+  3. Open explorer.html in your browser (double-click it in this folder). Try it: colour by
+     instrument, then by organism. Select a region.
   4. Only now, paste PART 2. Then read covariates.md.
 
   Do the parts in this order. Part 1 gives you a picture; Part 2 tells you whether the
@@ -43,5 +44,3 @@ IF YOU FINISH EARLY
   - "Which region would make the cleanest figure panel? Score regions by purity and by how
     much of the category they capture."
 
-
-ESTIMATED QUOTA: 60 to 90 requests.

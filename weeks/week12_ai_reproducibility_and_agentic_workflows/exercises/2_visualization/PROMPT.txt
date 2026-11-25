@@ -5,6 +5,9 @@ Run PART 1 first and look at what it produces. Only then run PART 2.
 PART 1
 ==========================================================================================
 
+If you need Python packages, create a virtual environment in this folder first
+(python3 -m venv .venv) and install them there. Do not install anything system-wide.
+
 umap_spectra_25k.csv holds 25,000 mass spectra: 2-D UMAP coordinates (umap_x, umap_y), a
 separate 3-D fit (umap3d_1, umap3d_2, umap3d_3), and metadata for each spectrum. The file is
 large: read it with code and do not print it.

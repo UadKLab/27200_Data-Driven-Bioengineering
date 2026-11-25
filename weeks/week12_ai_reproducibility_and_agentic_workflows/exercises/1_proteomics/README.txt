@@ -1,4 +1,4 @@
-DIFFERENTIAL PROTEOMICS                                          Second - about 2 hours
+DIFFERENTIAL PROTEOMICS                                          Second - about 30 min
 
 WHAT YOU WILL DO
 Take real output from a published proteomics experiment and use an agent to find the
@@ -17,13 +17,14 @@ THE DATA
 
 
 STEPS
-  1. In the Colab terminal:
-         cd /content/exercise/1_proteomics
-         gemini
-  2. Paste the whole of PROMPT.txt.
+  1. In a terminal, start your agent in this folder (see START_HERE.txt):
+         cd path/to/exercises/1_proteomics
+         codex        (or: copilot, agy, claude)
+  2. Type:  Read PROMPT.txt and follow it.   (or paste the whole of PROMPT.txt)
+     Do not @-attach proteinGroups.txt: it is far bigger than the context window.
   3. After step 1 the agent stops. Read what it found. Does the sample mapping look right?
      Then type:  continue
-  4. When it finishes, open volcano.png (Files panel on the left) and read RESULTS.md.
+  4. When it finishes, open volcano.png and read RESULTS.md (both in this folder).
      Keep results.csv: you can rebuild the knowledge base's gene cards from it.
 
 
@@ -36,8 +37,8 @@ YOUR CHECKS  -  answer these yourself before comparing with anyone else
   4. Did the agent notice how the samples were processed? Did it do anything about it?
   5. The paper reports 132 proteins that changed. How many did you find? Give two reasons
      why the numbers could differ.
-  6. Could you re-run analysis.py without the agent? Try it in a Colab cell:
-         !cd /content/exercise/1_proteomics && python analysis.py
+  6. Could you re-run analysis.py without the agent? Try it in a new terminal, in this folder:
+         python3 analysis.py      (on Windows: python analysis.py)
 
 
 IF YOU FINISH EARLY
@@ -45,5 +46,3 @@ IF YOU FINISH EARLY
   - "I do not believe protein X. Show me its raw intensity in every sample."
   - "Make the volcano plot interactive, so hovering a point shows the gene and its values."
 
-
-ESTIMATED QUOTA: 50 to 80 requests.

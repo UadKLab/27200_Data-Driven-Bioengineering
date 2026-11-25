@@ -15,73 +15,76 @@ Press ↓ on a slide to open its study note.
 
 ## Exercises
 
-All three are optional: go as far as time allows, in class or at home, in this order.
+You work on your own computer, with a coding agent. All three exercises are optional: go as far
+as time allows, in class or at home, in this order.
 
 | Order | Exercise | Folder | Time |
 |---|---|---|---|
-| Start here | A small knowledge base | [exercises/3_knowledge_cards](exercises/3_knowledge_cards) | ~45 min |
-| Then | Differential proteomics | [exercises/1_proteomics](exercises/1_proteomics) | ~2 h |
-| Then | Your own explorer | [exercises/2_visualization](exercises/2_visualization) | ~1 h 15 |
+| Start here | A small knowledge base | [exercises/3_knowledge_cards](exercises/3_knowledge_cards) | ~15 min |
+| Then | Differential proteomics | [exercises/1_proteomics](exercises/1_proteomics) | ~30 min |
+| Then | Your own explorer | [exercises/2_visualization](exercises/2_visualization) | ~20 min |
 
 The full instructions are in [exercises/START_HERE.txt](exercises/START_HERE.txt). Each folder has a
-`README.txt` with what to do and what to check, and a `PROMPT.txt` to paste into the agent.
+`README.txt` with what to do and what to check, and a `PROMPT.txt` for the agent.
 
-### Download the exercises
+### 1. Install one agent (before class)
+
+Pick the one you have an account for.
+
+| Agent | Account | Install | Start |
+|---|---|---|---|
+| [Codex CLI](https://developers.openai.com/codex/quickstart) (OpenAI) | ChatGPT, free plan included | `npm install -g @openai/codex` | `codex` |
+| [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) | GitHub, free plan included; more on the student plan | `npm install -g @github/copilot` | `copilot` |
+| [Antigravity CLI](https://antigravity.google) (Google) | personal Google account, free tier | macOS/Linux: `curl -fsSL https://antigravity.google/cli/install.sh \| bash` · Windows (PowerShell): `irm https://antigravity.google/cli/install.ps1 \| iex` | `agy` |
+| [Claude Code](https://code.claude.com/docs/en/setup) (Anthropic) | paid Claude plan | macOS/Linux: `curl -fsSL https://claude.ai/install.sh \| bash` · Windows (PowerShell): `irm https://claude.ai/install.ps1 \| iex` | `claude` |
+
+You also need:
+
+- [Node.js](https://nodejs.org) (the LTS version) for the `npm` commands
+- [Python 3](https://www.python.org/downloads/), because the agents write and run Python
+
+Sign in with your account the first time you start the agent. The free tiers are small: read what
+the agent prints before you ask again, and keep prompts specific.
+
+### 2. Download the exercises
 
 Click **[27200_Week12_exercises.zip](27200_Week12_exercises.zip)**, then the download button
-(*Download raw file*). The same zip is on DTU Learn under Week 12.
+(*Download raw file*). The same zip is on DTU Learn under Week 12. Unzip it.
 
-### Option A: Google Colab and Gemini CLI (free, nothing to install)
+### 3. Start an exercise
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UadKLab/27200_Data-Driven-Bioengineering/blob/main/weeks/week12_ai_reproducibility_and_agentic_workflows/exercises/exercise_setup.ipynb)
+Open a terminal, go into an exercise folder and start your agent there:
 
-1. Get a free API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
-2. Open the set-up notebook with the badge above.
-3. Click the key icon on the left, add a secret called `GEMINI_API_KEY`, paste the key, and switch
-   on *Notebook access*.
-4. Run the cells from top to bottom. Upload the zip when asked (not unzipped) and wait for `Ready.`
-5. Open Colab's **Terminal** and start the first exercise:
+```bash
+cd path/to/exercises/3_knowledge_cards
+codex      # or: copilot, agy, claude
+```
 
-   ```bash
-   cd /content/exercise/3_knowledge_cards
-   gemini
-   ```
+The agent can read and write the files in that folder. Then type *Read PROMPT.txt and follow it*,
+or paste the whole of `PROMPT.txt`.
 
-   If it asks how to sign in, choose *Use Gemini API key*. Then paste all of `PROMPT.txt`.
+### Giving the agent files
 
-### Option B: already using Claude Code, Codex or the ChatGPT desktop app?
+The agent already sees every file in the folder you started it in. To point at one file in your
+message, type `@` and the file name:
 
-Then you can skip Colab and the API key, and work on your own computer.
-
-1. Download the zip (above) and unzip it.
-2. Open the exercise folder in your agent. In a terminal:
-
-   ```bash
-   cd exercises/3_knowledge_cards
-   claude      # Claude Code
-   codex       # Codex
-   ```
-
-   In a desktop app, choose that folder as the project or working folder.
-3. Paste all of `PROMPT.txt`. The prompts are written for Gemini CLI but work in any agent.
-
-To install one (both need an account, usually a paid plan):
-
-| Tool | Install |
+| Agent | How |
 |---|---|
-| Claude Code | macOS/Linux: `curl -fsSL https://claude.ai/install.sh \| bash` · Windows (PowerShell): `irm https://claude.ai/install.ps1 \| iex` · or the Claude desktop app, Code tab ([claude.com/download](https://claude.com/download)). [Docs](https://code.claude.com/docs/en/setup) |
-| Codex | `npm install -g @openai/codex`, or the Codex app. [Docs](https://developers.openai.com/codex/quickstart) |
+| Codex CLI | Type `@` and a file search opens. For an image: `codex -i volcano.png "What does this plot show?"` |
+| Copilot CLI | `Explain @README.txt`, or drag a file from your file browser into the terminal |
+| Antigravity CLI | `Summarise @sources/SOURCES.md`; if your version does not complete it, just write the file name |
+| Claude Code | `@PROMPT.txt` (Tab completes the name); dragging a file into the terminal pastes its path |
 
-Sign in with your Claude or ChatGPT account the first time you start it.
+Do **not** attach the data files (`proteinGroups.txt`, `umap_spectra_25k.csv`): they are far bigger
+than the context window. Name them, and let the agent read them with code.
 
-### If something does not work
+The agent asks before it runs a command or changes a file. Read what it wants to do, then approve.
+Do not switch on "approve everything" modes on your own computer.
 
-- Out of quota, or the agent will not start? Use any free chat assistant (Gemini, Claude, ChatGPT)
-  with `PROMPT_chat.txt`: upload the data file, never paste the data itself.
-- Keep a `NOTES.md` (every prompt asks for one). If a session stops, start a new one and type:
-  *Read NOTES.md and continue from the next step.*
-- Colab deletes everything when you close the session. The last cell of the notebook downloads
-  your work as a zip.
+### If a session stops
+
+Every prompt asks the agent to keep a `NOTES.md`. Start a new session in the same folder and type:
+*Read NOTES.md and continue from the next step.*
 
 All data in these exercises is public. Do not use free tiers like this for confidential or
 unpublished data.

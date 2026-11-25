@@ -2,6 +2,9 @@ We are going to build a small knowledge base in the folder hypoxia_kb/. Read
 hypoxia_kb/README.md first: it describes the folder, the card format and the rules. Follow
 it exactly.
 
+If you need Python packages, create a virtual environment in this folder first
+(python3 -m venv .venv) and install them there. Do not install anything system-wide.
+
 The papers are in hypoxia_kb/sources/:
   Hofner2025_KGN_hypoxia.md   - a proteomics study of human granulosa cells (KGN) in low oxygen
   Luo2022_hypoxia_review.md   - a review of hypoxia signalling

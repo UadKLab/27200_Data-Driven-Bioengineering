@@ -1,8 +1,8 @@
-A SMALL KNOWLEDGE BASE                                          Start here - about 45 min
+A SMALL KNOWLEDGE BASE                                          Start here - about 15 min
 
 WHAT YOU WILL DO
 Turn two papers and a table of proteomics results into a set of linked study cards: a small
-knowledge base you can download and keep. Every claim on a card must quote the sentence in
+knowledge base you can keep. Every claim on a card must quote the sentence in
 the paper that supports it, and a script checks that the sentence is really there.
 
 The script can check that a quote exists. Only you can check that it supports the claim.
@@ -10,15 +10,14 @@ That split - the machine checks what it can, you check the rest - is the point.
 
 
 WHAT IS IN THIS FOLDER
-  hypoxia_kb/            the knowledge base. This is what you download at the end.
+  hypoxia_kb/            the knowledge base. This is what you keep at the end.
     README.md            what the knowledge base is, the card format, the rules - read it
     sources/             the two papers, as plain text, and their citations
     tools/check_kb.py    the checking script
     concepts/  genes/    empty - the agent fills them
-  PROMPT.txt             paste this into Gemini
-  PROMPT_chat.txt        use this instead if you work in a chat assistant
+  PROMPT.txt             give this to your agent
   PROMPT_update.txt      if you finish early
-  make_zip.py            packs hypoxia_kb/ into hypoxia_kb.zip for download
+  make_zip.py            checks the cards and packs hypoxia_kb/ into hypoxia_kb.zip
   new_paper/             a third paper, for PROMPT_update.txt
   pdf/                   the review as a PDF, if you want to see its figures
 
@@ -36,19 +35,18 @@ BEFORE YOU START
 
 
 STEPS
-  1. In the Colab terminal:
-         cd /content/exercise/3_knowledge_cards
-         gemini
-  2. Paste the whole of PROMPT.txt.
+  1. In a terminal, start your agent in this folder (see START_HERE.txt):
+         cd path/to/exercises/3_knowledge_cards
+         codex        (or: copilot, agy, claude)
+  2. Type:  Read PROMPT.txt and follow it.   (or paste the whole of PROMPT.txt)
   3. The agent proposes 5 concept cards and 6 gene cards, and stops. Look at the gene list:
      are these really among your significant proteins? Then type:
          continue
   4. The agent writes the cards, runs the check, fixes what it reports, and makes
      hypoxia_kb.zip.
-  5. Download it: Files panel on the left > 3_knowledge_cards > right-click hypoxia_kb.zip >
-     Download. (Or use the "Download your work" cell in the notebook.)
-  6. Unzip it. Open the hypoxia_kb folder in Obsidian (free, obsidian.md, "Open folder as
-     vault"), or read the files in any text editor. Start with INDEX.md.
+  5. Open the hypoxia_kb folder in Obsidian (free, obsidian.md, "Open folder as vault"), or
+     read the files in any text editor. Start with INDEX.md. It is already on your computer;
+     hypoxia_kb.zip is a copy to share or archive.
 
 
 YOUR CHECKS
@@ -70,13 +68,3 @@ IF YOU FINISH EARLY
     them? Under what oxygen level were the new paper's experiments done - and does that
     matter when you compare them with the KGN hypoxia results?
   - Open the graph view in Obsidian. Which card is the most connected? Does that make sense?
-
-
-ESTIMATED QUOTA: 40 to 60 requests, plus about 20 for PROMPT_update.txt.
-
-
-IF YOU USE A CHAT ASSISTANT INSTEAD
-  Follow PROMPT_chat.txt. Paste the chat's answers, one after the other, into a new text
-  file called cards.txt and upload it to this folder in Colab. Then, in a notebook cell:
-      !cd /content/exercise/3_knowledge_cards && python make_zip.py --from-chat cards.txt
-  That unpacks the cards, runs the check and makes hypoxia_kb.zip.

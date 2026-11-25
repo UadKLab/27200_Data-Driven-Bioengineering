@@ -1,4 +1,4 @@
-Only if you finish early. Use this in the same Gemini session, or in a new one started in
+Only if you finish early. Use this in the same agent session, or in a new one started in
 this folder.
 -------------------------------------------------------------------------------------------
 
